@@ -1,1 +1,1 @@
-# Clustering with Hadoop MapReduce using K-Means & K-Medoids algorithms
+# Clustering with Hadoop MapReduce K-Means & K-Medoids
