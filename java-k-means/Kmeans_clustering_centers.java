@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class KMeans_5i {
+public class Kmeans_clustering_centers {
     public static int centroidCount = 0;
     public static List<ClusterCenter> centroids = new ArrayList<ClusterCenter>();
     public static List<ClusterCenter> previousCentroids = new ArrayList<ClusterCenter>();
@@ -224,10 +224,10 @@ public class KMeans_5i {
         centroids = selectedCentroids;
         previousCentroids = new ArrayList<>(centroids);
 
-        job.setJarByClass(KMeans_5i.class);
-        job.setMapperClass(KMeans_5i.KMeansMapper.class);
+        job.setJarByClass(Kmeans_clustering_centers.class);
+        job.setMapperClass(Kmeans_clustering_centers.KMeansMapper.class);
         job.setCombinerClass(KMeansCombiner.class);
-        job.setReducerClass(KMeans_5i.KMeansReducer.class);
+        job.setReducerClass(Kmeans_clustering_centers.KMeansReducer.class);
 
         job.setMapOutputKeyClass(IntWritable.class);
         job.setMapOutputValueClass(Point.class);
