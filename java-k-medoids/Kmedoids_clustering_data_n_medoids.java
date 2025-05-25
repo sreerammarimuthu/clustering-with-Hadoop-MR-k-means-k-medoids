@@ -12,7 +12,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KMedoids_5ii {
+public class Kmedoids_clustering_data_n_medoids {
 
     public static int medoidCount = 0;
     public static List<Medoid> medoids = new ArrayList<Medoid>();
@@ -213,7 +213,7 @@ public class KMedoids_5ii {
         medoids = seedMedoids;
         previousMedoids = new ArrayList<>(medoids);
 
-        job.setJarByClass(KMedoids_5ii.class);
+        job.setJarByClass(Kmedoids_clustering_data_n_medoids.class);
         job.setMapperClass(KMedoidsMapper.class);
         job.setCombinerClass(KMedoidsCombiner.class);
         job.setReducerClass(KMedoidsReducer.class);
