@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class KMedoids_5i {
+public class Kmedoids_clustering_medoids {
     public static int medoidCount = 0;
     public static List<Medoid> medoids = new ArrayList<Medoid>();
     public static List<Medoid> previousMedoids = new ArrayList<Medoid>();
@@ -178,10 +178,10 @@ public class KMedoids_5i {
         medoids = selectedMedoids;
         previousMedoids = new ArrayList<>(medoids);
 
-        job.setJarByClass(KMedoids_5i.class);
-        job.setMapperClass(KMedoids_5i.KMedoidsMapper.class);
+        job.setJarByClass(Kmedoids_clustering_medoids.class);
+        job.setMapperClass(Kmedoids_clustering_medoids.KMedoidsMapper.class);
         job.setCombinerClass(KMedoidsCombiner.class);
-        job.setReducerClass(KMedoids_5i.KMedoidsReducer.class);
+        job.setReducerClass(Kmedoids_clustering_medoids.KMedoidsReducer.class);
 
         job.setMapOutputKeyClass(IntWritable.class);
         job.setMapOutputValueClass(Point.class);
