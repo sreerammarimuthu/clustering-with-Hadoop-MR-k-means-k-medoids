@@ -4,13 +4,13 @@ This project explores scalable unsupervised learning using Hadoop MapReduce, wit
 
 ## Contents
 
-- `java-k-means/`, `java-k-medoids/`: Implements K-Means and K-Medoids clustering algorithms respectively via MapReduce. Supports dynamic k, iterative convergence, and early stopping.   
+- `java-k-means/`, `java-k-medoids/` - Implements K-Means and K-Medoids clustering algorithms respectively via MapReduce. Supports dynamic k, iterative convergence, and early stopping.   
   
-- `data/`: Clean x,y coordinate data for clustering. Separate folders for K-Means and K-Medoids with same data points (x,y) but different seed points.   
+- `data/` - Clean x,y coordinate data for clustering. Separate folders for K-Means and K-Medoids with same data points (x,y) but different seed points.   
   
-- `output/`: Organized by algorithm and depends on the k value. Contains both: Final cluster centers or medoids. Cluster-to-point assignments for visual confirmation.   
+- `output/` - Organized by algorithm and depends on the k value. Contains both: Final cluster centers or medoids. Cluster-to-point assignments for visual confirmation.   
   
-- `utils/data-creation.ipynb`: Jupyter notebook to create the dataset with random data and seed points.   
+- `utils/data-creation.ipynb` - Jupyter notebook to create the dataset with random data and seed points.   
 
 ## Key Notes
 
